@@ -15,7 +15,6 @@ class CatalogViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Flickr Images"
         
-      //  APIManager.shared.fetchFlickrImages { [weak self] images in
         APIServiceCombine.shared.fetchFlickrImages { [weak self] images in
             DispatchQueue.main.async {
                 guard let self else {return }
